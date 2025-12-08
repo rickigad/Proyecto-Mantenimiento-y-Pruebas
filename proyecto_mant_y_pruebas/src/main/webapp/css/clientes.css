@@ -1,0 +1,290 @@
+/* ===== ESTILOS ESPECÍFICOS PARA CLIENTES ===== */
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Encabezado */
+header {
+    background-color: #d2b887;
+    width: 100%;
+}
+
+/* Contenedor del nav */
+.menu-principal {
+    background-color: #a3824f;
+    display: flex;
+    align-items: center;       /* centra verticalmente logo y menú */
+    justify-content: flex-start; /* logo a la izquierda */
+    padding: 0 50px;
+    height: 100px;
+    box-sizing: border-box;
+}
+
+/* Logo */
+.logo {
+    height: 90px;
+    margin-right: 60px; /* separa el logo del menú */
+}
+
+/* Menú */
+.menu-principal ul {
+    display: flex;
+    flex: 1;                     /* ocupa todo el espacio restante */
+    justify-content: space-evenly; /* distribuye los enlaces en el resto del ancho */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Enlaces */
+.menu-principal a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.menu-principal a:hover {
+    color: #000;
+}
+
+/* Estadísticas rápidas - Tarjetas */
+.stats-rapidas {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.stat-card {
+    background: linear-gradient(135deg, #a3824f, #d2b887);
+    color: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    text-align: center;
+    min-width: 200px;
+    flex: 1;
+    box-shadow: 0 4px 15px rgba(163, 130, 79, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(163, 130, 79, 0.4);
+}
+
+.stat-value {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+.stat-label {
+    font-size: 1rem;
+    opacity: 0.9;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Controles superiores */
+.controles {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.btn-primario {
+    background-color: #a3824f;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primario:hover {
+    background-color: #8b6f42;
+}
+
+.filtros {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.filtros input, .filtros select {
+    padding: 8px 12px;
+    border: 2px solid #d2b887;
+    border-radius: 6px;
+    background-color: white;
+}
+
+.filtros input:focus, .filtros select:focus {
+    outline: none;
+    border-color: #a3824f;
+    box-shadow: 0 0 0 3px rgba(163, 130, 79, 0.1);
+}
+
+/* Tabla de clientes */
+.tabla-container {
+    overflow-x: auto;
+    margin-bottom: 2rem;
+}
+
+.tabla-clientes {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.tabla-clientes th {
+    background-color: #a3824f;
+    color: white;
+    padding: 12px;
+    text-align: left;
+    font-weight: bold;
+}
+
+.tabla-clientes td {
+    padding: 12px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.tabla-clientes tr:hover {
+    background-color: #f9f9f9;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    backdrop-filter: blur(2px);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 2rem;
+    border: none;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 600px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+    position: relative;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    position: absolute;
+    right: 15px;
+    top: 10px;
+}
+
+.close:hover {
+    color: black;
+}
+
+/* Formulario */
+.form-row {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.form-grupo {
+    flex: 1;
+    margin-bottom: 1rem;
+}
+
+.form-grupo label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.form-grupo input,
+.form-grupo textarea,
+.form-grupo select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 2px solid #d2b887;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-grupo input:focus,
+.form-grupo textarea:focus,
+.form-grupo select:focus {
+    outline: none;
+    border-color: #a3824f;
+    box-shadow: 0 0 0 3px rgba(163, 130, 79, 0.1);
+}
+
+.form-botones {
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end;
+    margin-top: 2rem;
+}
+
+.btn-cancelar {
+    background-color: #6c757d;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn-cancelar:hover {
+    background-color: #5a6268;
+}
+
+/* Indicadores de validación */
+.form-grupo input.error {
+    border-color: #dc3545;
+}
+
+.form-grupo .mensaje-error {
+    color: #dc3545;
+    font-size: 0.85rem;
+    margin-top: 5px;
+    display: block;
+}
+
+/* Mensaje sin resultados */
+.no-datos {
+    text-align: center;
+    padding: 3rem;
+    color: #999;
+    font-size: 1.1rem;
+}

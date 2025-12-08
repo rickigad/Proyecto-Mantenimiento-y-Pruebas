@@ -1,0 +1,335 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fef5e7;
+    min-height: 100vh;
+    color: #333;
+}
+
+/* Títulos con fuente diferente */
+h1, h2 {
+    font-family: 'Georgia', serif;
+    color: #003366;
+}
+
+/* Encabezado general */
+header {
+    background-color: #d2b887;
+    width: 100%;
+}
+
+/* Contenedor del nav */
+.menu-principal {
+    background-color: #a3824f;
+    display: flex;
+    align-items: center;       /* centra verticalmente logo y menú */
+    justify-content: flex-start; /* logo a la izquierda */
+    padding: 0 50px;
+    height: 100px;
+    box-sizing: border-box;
+}
+
+/* Logo */
+.logo {
+    height: 90px;
+    margin-right: 60px; /* separa el logo del menú */
+}
+
+/* Menú */
+.menu-principal ul {
+    display: flex;
+    flex: 1;                     /* ocupa todo el espacio restante */
+    justify-content: space-evenly; /* distribuye los enlaces en el resto del ancho */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Enlaces */
+.menu-principal a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.menu-principal a:hover {
+    color: #000;
+}
+
+/* Main contenedor */
+main {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 30px 24px;
+    min-height: calc(100vh - 300px);
+}
+
+/* Secciones generales */
+.seccion {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 2000px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+/* Título principal */
+.titulo-seccion {
+    color: #a3824f;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-weight: 700;
+}
+
+/* TARJETAS DEL DASHBOARD - usando el mismo estilo que stats-grid */
+.dashboard-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 🔹 Fuerza 3 tarjetas por fila */
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e5e7eb;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+.card-value {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #a3824f;
+    font-family: Arial, sans-serif;
+    margin-bottom: 10px;
+}
+
+.card-label {
+    font-size: 1.1rem;
+    color: #6b7280;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* SECCIÓN DE NOTICIAS */
+.grid-noticias {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 25px;
+}
+
+.card-noticia {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e5e7eb;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card-noticia:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+    text-decoration: none;
+    color: inherit;
+}
+
+.card-noticia img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.card-noticia:hover img {
+    transform: scale(1.05);
+}
+
+.card-noticia h3,
+.card-noticia h4 {
+    padding: 20px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #003366;
+    line-height: 1.5;
+    font-family: 'Georgia', serif;
+}
+
+/* PIE DE PÁGINA */
+footer {
+    background-color: #f3e2bd;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Menú secundario del footer */
+.menu-secundario ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.menu-secundario li {
+    margin: 0 15px;
+}
+
+.menu-secundario a {
+    text-decoration: none;
+    color: #333;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.menu-secundario a:hover {
+    background-color: rgba(163, 130, 79, 0.2);
+}
+
+/* Enlace de cerrar sesión */
+.logout {
+    display: inline-block;
+    margin-top: 10px;
+    color: rgb(88, 43, 5);
+    text-decoration: none;
+    background: #d2b887;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.logout:hover {
+    background: #a3824f;
+    color: white;
+    text-decoration: none;
+}
+
+/* Botones base (por si necesitas botones adicionales) */
+.btn {
+    background: #a3824f;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 12px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background: #8b7355;
+}
+
+/* RESPONSIVIDAD */
+@media (max-width: 768px) {
+    .banner {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .busqueda {
+        max-width: 100%;
+        margin: 5px 0;
+    }
+    
+    .menu-principal ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    main {
+        padding: 20px 15px;
+    }
+    
+    .seccion {
+        margin: 1rem auto;
+        padding: 1.5rem;
+    }
+    
+    .titulo-seccion {
+        font-size: 1.5rem;
+    }
+    
+    .dashboard-cards {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .card-value {
+        font-size: 2rem;
+    }
+    
+    .grid-noticias {
+        grid-template-columns: 1fr;
+    }
+    
+    .menu-secundario ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        height: 80px;
+    }
+    
+    .card {
+        padding: 20px 15px;
+    }
+    
+    .card-value {
+        font-size: 1.8rem;
+    }
+    
+    .card-label {
+        font-size: 1rem;
+    }
+    
+    .titulo-seccion {
+        font-size: 1.3rem;
+    }
+    
+    .card-noticia h3,
+    .card-noticia h4 {
+        font-size: 1rem;
+        padding: 15px;
+    }
+}

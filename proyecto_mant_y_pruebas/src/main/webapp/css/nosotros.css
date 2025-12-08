@@ -1,0 +1,157 @@
+/* Reset y estilos base */
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #fef5e7;
+    color: #333;
+}
+
+/* Encabezado */
+header {
+    background-color: #d2b887;
+    width: 100%;
+}
+
+/* Contenedor del nav */
+.menu-principal {
+    background-color: #a3824f;
+    display: flex;
+    align-items: center;       /* centra verticalmente logo y menú */
+    justify-content: flex-start; /* logo a la izquierda */
+    padding: 0 50px;
+    height: 100px;
+    box-sizing: border-box;
+}
+
+/* Logo */
+.logo {
+    height: 90px;
+    margin-right: 60px; /* separa el logo del menú */
+}
+
+/* Menú */
+.menu-principal ul {
+    display: flex;
+    flex: 1;                     /* ocupa todo el espacio restante */
+    justify-content: space-evenly; /* distribuye los enlaces en el resto del ancho */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Enlaces */
+.menu-principal a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.menu-principal a:hover {
+    color: #000;
+}
+
+/* Contenido principal */
+main {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-family: Georgia, serif;
+    color: #003366;
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5em;
+}
+
+/* Equipo */
+.equipo {
+    display: grid;
+    gap: 30px;
+}
+
+.miembro {
+    background: #bfa773;
+    border-radius: 15px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.miembro:hover { 
+    transform: translateY(-5px); 
+}
+
+.miembro img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid white;
+}
+
+.info h3 {
+    color: white;
+    font-size: 1.4em;
+    margin-bottom: 8px;
+}
+
+.info p {
+    color: #fef5e7;
+    line-height: 1.5;
+    margin-bottom: 5px;
+}
+
+/* Pie de página */
+footer {
+    background-color: #f3e2bd;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Menú secundario del footer */
+.menu-secundario ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.menu-secundario li {
+    margin: 0 15px;
+}
+
+.menu-secundario a {
+    text-decoration: none;
+    color: #333;
+}
+
+/* Enlace de cerrar sesión */
+.logout {
+    display: inline-block;
+    margin-top: 10px;
+    color: rgb(88, 43, 5);
+    text-decoration: none;
+    background: #d2b887;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.logout:hover {
+    background: #a3824f;
+    color: white;
+    text-decoration: none;
+}
